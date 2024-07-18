@@ -1,0 +1,63 @@
+
+
+.containerAuth {
+  margin: 50px;
+  overflow-x:hidden;
+}
+
+
+.containerAuth h1 {
+  color: #111;
+  margin-bottom: 45px;
+  line-height: 1em;
+  font-weight: 500;
+  padding-left: 10px;
+  border-left: 5px solid #ff8800;
+}
+
+.inputBox {
+  position: relative;
+  width: 300px;
+  height: 46px;
+  margin-bottom: 35px;
+}
+
+.inputBox:last-child {
+  margin-bottom: 0;
+}
+
+.inputBox input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border: 1px solid #111;
+  background: transparent;
+  padding: 10px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  outline: none;
+  font-size: 16px;
+  color: #111;
+  font-weight: 300;
+}
+
+.inputBox span {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  display: inline-block;
+  padding: 10px;
+  font-size: 16px;
+  color: #111;
+  font-weight: 300;
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.inputBox input:focus~span,
+.inputBox input:valid~span {
+  font-size: 12px;
+  color: #111;
+  transform: translateX(-10px) translateY(-32px);
+}

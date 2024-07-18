@@ -1,14 +1,23 @@
-
+import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
-import Content from './Components/Content';
 import Header from './Components/Header';
-
+import About from './Components/About';
+import Auth from './Components/Auth';
+import Test from './Components/Scene';
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Content />
-    </div>
+    <BrowserRouter >
+      <div className="App">
+        <Header />
+        <Routes >
+          <Route path='/about' element= {<About />} />
+          <Route path='/auth' element={<Auth />} />
+          <Route path='/test' element={<Test />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
+   
   );
 }
 
